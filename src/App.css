@@ -1,0 +1,55 @@
+:root{
+  margin: 0;
+  padding: 0;
+}
+#navbar {
+
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+#navbar-sub{
+  padding-right: 5em;
+}
+
+.search-bar-form{
+  align-items: center;
+  display: flex;
+  margin-bottom: .3em;
+}
+.post{
+  border-style: solid;
+  margin-bottom: .3em;
+  
+  width: 600px;
+  
+
+}
+h3{
+  margin: 0.5em;
+}
+h2{
+  margin:0.5em;
+}
+h4{
+  margin:0.5em;
+}
+.edit{
+  margin-left: .6em;
+  margin-right: 1em;
+  margin-bottom: .2em;
+}
+.sendMessage{
+  margin-left: .6em;
+  margin-bottom: .2em;
+}
+.message-box{
+  border-style: solid;
+  margin-bottom: .3em;
+  
+  width: 300px;
+}

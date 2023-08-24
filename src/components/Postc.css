@@ -1,0 +1,55 @@
+.form-container {
+    width: 200px;
+    height: 170px;
+    top: 0;
+    left: 0;
+    float: left;
+    justify-content: center;
+    text-align: left;
+    background-color: hsl(0, 0%, 100%);
+    border: 4px solid hsl(0, 0%, 90%);
+    padding-left: .5em;
+    padding-top: .3em;
+  }
+.submit-in-C{
+    margin-top: .3em;
+}
+.form-Update{
+    width: 200px;
+    height: 210px;
+    top: 0;
+    left: 0;
+    float: left;
+    justify-content: center;
+    text-align: left;
+    background-color: hsl(0, 0%, 100%);
+    border: 4px solid hsl(0, 0%, 90%);
+    padding-left: .5em;
+    padding-top: .3em;
+}
+.home{
+    
+    justify-content: center;
+    text-align: center;
+}
+
+.form-login{
+    width: 200px;
+    height: 110px;
+    justify-content: center;
+    text-align: left;
+    background-color: hsl(0, 0%, 100%);
+    border: 4px solid hsl(0, 0%, 90%);
+    padding-left: .5em;
+    padding-top: .3em;
+}
+.form-signup{
+    width: 200px;
+    height: 160px;
+    justify-content: center;
+    text-align: left;
+    background-color: hsl(0, 0%, 100%);
+    border: 4px solid hsl(0, 0%, 90%);
+    padding-left: .5em;
+    padding-top: .3em;
+}

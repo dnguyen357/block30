@@ -1,0 +1,15 @@
+.notification {
+    position: fixed;
+    top: -100px; /* Start off-screen */
+    left: 0;
+    right: 0;
+    background-color: lightgreen
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    transition: top 0.3s ease-in-out;
+  }
+  
+  .notification.visible {
+    bottom: 0; /* Slide up to show */
+  }
