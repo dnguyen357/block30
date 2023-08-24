@@ -6,8 +6,6 @@ export default function Profile(){
     let data = sessionStorage.getItem("key");
     const [messages, setMessages] = useState([])
     const BASE_URL = `https://strangers-things.herokuapp.com/api/2302-ACC-ET-WEB-PT-A`
-    const [filterMFromMe,setFilterMFromMe] = useState([]);
-    const [filterMToMe,setFilterMToMe] = useState([]);
     let username = sessionStorage.getItem("username");
 
     async function getMessage(){
@@ -21,17 +19,13 @@ export default function Profile(){
               
             });
             const result = await response.json();
-            const P =result.data;
+            const P =result.data.messages;
             
-            setMessages(P.messages)
+            setMessages(P)
+
           } catch (err) {
             console.error(err);
           }
-    }
-    
-   
-    function handleNext(id){
-        navigate(`/message-to/${id}`)
     }
     
 
@@ -42,13 +36,13 @@ export default function Profile(){
     
     
     
-    function filterMessageFromM(){
+    function filterMessageFromM(messages){
         const filtered = messages.filter(message=> message.fromUser.username.toLowerCase().includes(username.toLowerCase()))
-        setFilterMFromMe(filtered)
+        return filtered
     }
-    function filterMessageToM(){
+    function filterMessageToM(messages){
         const filtered = messages.filter(message=> !message.fromUser.username.toLowerCase().includes(username.toLowerCase()))
-        setFilterMToMe(filtered)
+        return filtered
     }
     function Messages ({message}){
         
@@ -62,17 +56,15 @@ export default function Profile(){
         )
         
     }
-    useEffect(()=>{
-        filterMessageFromM();
-        filterMessageToM();
-    },[])
+    
+   
     return (
 
         <div>
             <div>
                 <h1>Message To Me</h1>
                   {
-                    filterMToMe.map(message=>{
+                    filterMessageToM(messages).map(message=>{
                         return <Messages key={message._id} message={message}/>})
                   }  
                 
@@ -80,7 +72,7 @@ export default function Profile(){
             <div>
                 <h1>Message From Me</h1>  
                 {
-                    filterMFromMe.map(message=>{
+                    filterMessageFromM(messages).map(message=>{
                         return <Messages key={message._id} message={message}/>})
                   } 
             </div>
